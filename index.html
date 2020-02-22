@@ -10,9 +10,15 @@
     <style>
         
         #google-container {
+            position: relative;
             min-width: 900px;
             margin: 0 auto;
+            min-height: 100vh;
             text-align: center;
+        }
+
+        #content-wrap {
+            padding-bottom: 2.5rem;
         }
         #logo {
     
@@ -53,13 +59,14 @@
             border: none;
             font-size: 14px;
         }
-        ul {
+        #navbar {
             list-style-type: none;
             align-items:  center;
             overflow: hidden;
             font-size: 12px;
             color:#404040;
             margin: 0 20px;
+            max-width: 100%;
         }
 
         .left-nav {
@@ -84,9 +91,44 @@
            border: none;
         }
 
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #eaeaead9
+
+        }
+        /* Text styling of footer goes in here */
+        #foot { 
+            list-style-type: none;
+            font-size: 13px;
+            font-weight: lighter;
+            color: #575757;
+            border: 1px solid #2828280a;
+            padding: 0 15px;
+        }
+
+        .table {
+            max-width: 100%; 
+
+        }
+
+        ul#foot li {
+            padding: 12px;
+        }
+
+        .left-foot {
+            float: left;
+            
+        }
+
+        .right-foot {
+            float: right;
+        }
+
     </style>
     <nav>
-        <ul>
+        <ul id="navbar">
             <li class="left-nav">About</li>
             <li class="left-nav">Store</li>
             <li class="right-nav">
@@ -101,12 +143,29 @@
     <body>
         
         <div id="google-container">
-            <img id="logo" src="googlelogo_color_272x92dp.png"/>
-            <form id="search">
-                <input id="search-bar" type="text">
-                <button class= "search-btn" id="google-search-btn" type="button">Google Search</button>
-                <button class= "search-btn" id="lucky-btn" type="button">I'm Feeling Lucky</button>
-            </form>
+            <div id="content-wrap">
+                <img id="logo" src="googlelogo_color_272x92dp.png"/>
+                <form id="search">
+                    <input id="search-bar" type="text">
+                    <button class= "search-btn" id="google-search-btn" type="button">Google Search</button>
+                    <button class= "search-btn" id="lucky-btn" type="button">I'm Feeling Lucky</button>
+                </form>
+            </div>
+            <footer>
+                <div class="table">
+                <ul id="foot">
+                    <li class="left-foot">Advertising</li>
+                    <li class="left-foot">Business</li>
+                    <li class="left-foot">How Search works</li>
+                    <li class="right-foot">Settings</li>
+                    <li class="right-foot">Terms</li>
+                    <li class="right-foot">Privacy</li>
+                    
+                </ul>
+                </div>
+            </footer>
         </div>
     </body>
+
+    
 </html>
